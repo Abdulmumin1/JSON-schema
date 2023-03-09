@@ -20,4 +20,13 @@ from main import generate_schema
 JSON = {'name' :'Abdulmumin', 'age' :1000}
 JSON_schema = generate_schema(JSON) 
 
+print(JSON_schema) 
+# output
+#    {
+#      'type': 'object',
+#      'properties': {
+#      'name': {'type': 'string'},
+#      'age': {'type': 'integer'}
+#        }
+#     } 
 ```
