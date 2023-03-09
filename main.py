@@ -1,26 +1,4 @@
 import json
-# Load JSON data from file
-
-# json_schema = jsonschema.Draft7Validator(json_data['message'])
-
-testdata = {
-    "battle": {
-        "id": "ABCDEFGHIJKLMNOPQR",
-        "name": "ABCDEFGHIJKLMNOPQRSTUVWX",
-        "orientation": "ABCDEFGHIJKLMNO",
-        "settings": {
-            "minParticipants": 942,
-            "maxParticipants": 641,
-            "battleType": "ABCDEFGHIJKLMN",
-            "wagerType": "ABCDEFGHIJKLMNOPQRSTUVW",
-            "countdown": 69,
-            "duration": 200,
-            'hobbies': ['reading', 'running', 'swimming'],
-            "archetype": {
-              "name": "ABCDEFGHIJKLMNOPQRS",
-                "iconId": "ABCDEFGHIJKLMNOPQRST"
-            }
-        }}}
 
 def array_type(schema, json_property):
     try:
