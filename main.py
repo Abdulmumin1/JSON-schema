@@ -9,10 +9,10 @@ def array_type(schema, json_property):
         return
 
 def add_padding(schema, json_property):
-    
     schema['tags'] = ''
     schema['description'] = ''
     schema['required'] = False
+
 def generate_schema(json_property):
     schema = {}
     if isinstance(json_property, dict):
