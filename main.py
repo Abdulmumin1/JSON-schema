@@ -1,4 +1,5 @@
 import json
+import argparse
 
 def array_type(schema, json_property):
     try:
@@ -41,8 +42,23 @@ def generate_schema(json_property):
         schema['type'] = 'null'
     return schema
 
-with open('./data/data_2.json') as testdata:
-    testdata = json.loads(testdata.read())
-json_schema = generate_schema(testdata['message'])
-print(json.dumps(json_schema, indent=2))
+def save_schema(inp,out=None):
+    output_file_name="output.json"
+    if out:
+        output_file_name=out
+    with open(inp,"r") as source:
+        json_data =  json.loads(source.read())
+    json_schema=generate_schema(json_data)
+    with open(output_file_name,"r") as dest:
+        dest.write(json.dumps(json_schema,index=2))
+schema_parser = argparse.ArgumentParser(prog='main.py',description='Generate schema from json existing json file')
+schema_parser.add_argument('-f','--file',help="Json file",action="store")
+schema_parser.add_argument('-d','--destination',help="destination file",action="store")
 
+args = schema_parser.parse_args()
+if args.file: 
+    save_schema(inp=args.file)
+elif args.file and args.destination:
+    save_schema(args.file,args.destination)
+else:
+    schema_parser.print_help()
