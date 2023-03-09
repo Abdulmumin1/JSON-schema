@@ -42,18 +42,19 @@ def generate_schema(json_property):
         schema['type'] = 'null'
     return schema
 
-def save_schema(inp,out=None):
+def save_schema(inp,output=None):
     output_file_name="output.json"
     if out:
-        output_file_name=out
+        output_file_name=output
     with open(inp,"r") as source:
         json_data =  json.loads(source.read())
     json_schema=generate_schema(json_data)
-    with open(output_file_name,"r") as dest:
+    with open(output_file_name,"w") as dest:
         dest.write(json.dumps(json_schema,index=2))
-schema_parser = argparse.ArgumentParser(prog='main.py',description='Generate schema from json existing json file')
-schema_parser.add_argument('-f','--file',help="Json file",action="store")
-schema_parser.add_argument('-d','--destination',help="destination file",action="store")
+
+schema_parser = argparse.ArgumentParser(prog='main.py',description='Generate schema from existing json file')
+schema_parser.add_argument('-f','--file', help="JSON file path",action="store")
+schema_parser.add_argument('-d','--destination',help="Destination file path",action="store")
 
 args = schema_parser.parse_args()
 if args.file: 
