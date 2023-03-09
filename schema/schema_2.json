@@ -1,0 +1,127 @@
+{
+  "type": "object",
+  "properties": {
+    "user": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        "nickname": {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        "title": {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        "accountType": {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        "countryCode": {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        "orientation": {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        }
+      }
+    },
+    "time": {
+      "type": "integer",
+      "tags": "",
+      "description": "",
+      "required": false
+    },
+    "acl": {
+      "type": "array",
+      "items": []
+    },
+    "publicFeed": {
+      "type": "integer",
+      "tags": "",
+      "description": "",
+      "required": false
+    },
+    "internationalCountries": {
+      "type": "enum",
+      "items": [
+        {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        },
+        {
+          "type": "string",
+          "tags": "",
+          "description": "",
+          "required": false
+        }
+      ]
+    },
+    "topTraderFeed": {
+      "type": "integer",
+      "tags": "",
+      "description": "",
+      "required": false
+    }
+  }
+}
